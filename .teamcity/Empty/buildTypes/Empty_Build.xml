@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="Progress" />
+      <setting-ref ref="Progress1" />
+      <setting-ref ref="Progress2" />
+      <setting-ref ref="Progress3" />
+      <setting-ref ref="dotnet" />
+      <setting-ref ref="dotnet2" />
+    </disabled-settings>
+    <build-runners>
+      <runner id="dotnet" name="dotnet" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="dotnet2" name="dotnet2" type="dotnet">
+        <parameters>
+          <param name="command" value="build" />
+          <param name="dotNetCoverage.dotCover.home.path" value="%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+      <runner id="Progress" name="Progress" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="Progress1" name="Progress1" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="Progress2" name="Progress2" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="Progress3" name="Progress3" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo" />
+          <param name="teamcity.kubernetes.executor.pull.policy" value="IfNotPresent" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Empty_HttpsGithubComArunM3emptyRefsHeadsMain" />
+    </vcs-settings>
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="perfmon">
+        <parameters>
+          <param name="teamcity.perfmon.feature.enabled" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
+
