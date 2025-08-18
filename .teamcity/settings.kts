@@ -75,6 +75,11 @@ object Build : BuildType({
             enabled = false
             scriptContent = "echo"
         }
+        script {
+            name = "Change directory"
+            id = "Change_directory"
+            scriptContent = "cd /test/"
+        }
     }
 
     triggers {
