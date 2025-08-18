@@ -85,6 +85,11 @@ object Build : BuildType({
             id = "Prints_message"
             scriptContent = """echo "Kotlin DSL""""
         }
+        script {
+            name = "Shell type"
+            id = "Shell_type"
+            scriptContent = "echo ${'$'}SHELL"
+        }
     }
 
     triggers {
