@@ -41,8 +41,8 @@ object Build : BuildType({
 
     steps {
         dotnetBuild {
-            name = "net"
-            id = "net"
+            name = "dotnet"
+            id = "dotnet"
         }
     }
 
