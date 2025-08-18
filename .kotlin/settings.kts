@@ -54,6 +54,21 @@ object Build : BuildType({
             id = "Progress"
             scriptContent = "echo"
         }
+        script {
+            name = "Progress1"
+            id = "Progress1"
+            scriptContent = "echo"
+        }
+        script {
+            name = "Progress2"
+            id = "Progress2"
+            scriptContent = "echo"
+        }
+        script {
+            name = "Progress3"
+            id = "Progress3"
+            scriptContent = "echo"
+        }
     }
 
     triggers {
