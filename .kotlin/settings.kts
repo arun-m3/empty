@@ -60,6 +60,7 @@ object Build : BuildType({
         script {
             name = "Progress1"
             id = "Progress1"
+            enabled = false
             scriptContent = "echo"
         }
         script {
