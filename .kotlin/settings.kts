@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetBuild
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -47,6 +48,11 @@ object Build : BuildType({
         dotnetBuild {
             name = "dotnet2"
             id = "dotnet2"
+        }
+        script {
+            name = "Progress"
+            id = "Progress"
+            scriptContent = "echo"
         }
     }
 
