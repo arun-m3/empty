@@ -46,7 +46,7 @@ object Build : BuildType({
             id = "dotnet"
         }
         dotnetBuild {
-            val nom = "dotnet"
+            val nom = "dotnet3"
             name = nom
             id = "dotnet2"
         }
