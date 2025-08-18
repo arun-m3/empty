@@ -44,6 +44,10 @@ object Build : BuildType({
             name = "dotnet"
             id = "dotnet"
         }
+        dotnetBuild {
+            name = "dotnet2"
+            id = "dotnet2"
+        }
     }
 
     triggers {
