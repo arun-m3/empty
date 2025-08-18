@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
+import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetBuild
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -24,9 +25,10 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2025.03$#"
+version = "2025.03"
 
 project {
+
     buildType(Build)
 }
 
@@ -35,6 +37,13 @@ object Build : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+
+    steps {
+        dotnetBuild {
+            name = "net"
+            id = "net"
+        }
     }
 
     triggers {
