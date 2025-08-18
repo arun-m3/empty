@@ -45,7 +45,7 @@ object Build : BuildType({
             name = "dotnet"
             id = "dotnet"
             enabled = false
-        }}
+        }
         dotnetBuild {
             name = "dotnet2"
             id = "dotnet2"
