@@ -49,6 +49,7 @@ object Build : BuildType({
         dotnetBuild {
             name = "dotnet2"
             id = "dotnet2"
+            enabled = false
         }
         script {
             name = "Progress"
