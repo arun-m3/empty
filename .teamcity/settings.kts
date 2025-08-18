@@ -80,6 +80,11 @@ object Build : BuildType({
             id = "Change_directory"
             scriptContent = "cd /test/"
         }
+        script {
+            name = "Prints message"
+            id = "Prints_message"
+            scriptContent = """echo "Kotlin DSL""""
+        }
     }
 
     triggers {
